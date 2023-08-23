@@ -7,7 +7,7 @@ import Notifications from "@/components/Notifications";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Abinash Website",
+  title: "Restaurant Website",
   description: "Website for me",
 };
 
