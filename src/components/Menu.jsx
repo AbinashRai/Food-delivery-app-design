@@ -45,7 +45,7 @@ const Menu = () => {
           ))}
           {!user ? (
             <Link href="/login" onClick={() => setOpen(false)}>
-              LOGIN
+              Login
             </Link>
           ) : (
             <Link href="/orders" onClick={() => setOpen(false)}>

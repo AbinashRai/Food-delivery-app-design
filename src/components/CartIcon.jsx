@@ -5,10 +5,10 @@ import React from "react";
 const CartIcon = () => {
   return (
     <div href="/cart" className="flex items-center gap-4">
-      <div className="relative w-8 h-8">
+      <div className="relative w-8 h-8 md:w-5 md:h-5">
         <Image src="/cart.png" alt="cart" fill />
       </div>
-      <span>Cart 3</span>
+      <span>Cart (3)</span>
     </div>
   );
 };
