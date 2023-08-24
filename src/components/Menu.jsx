@@ -33,19 +33,30 @@ const Menu = () => {
           onClick={() => setOpen(false)}
         />
       )}
-      <div className="bg-red-500 text-white absolute left-0 top-24 w-full z-10 h-[calc(100vh-6rem)] flex items-center justify-center text-3xl flex-col gap-8">
-        {links.map((items) => (
-          <Link href={items.url} key={items.id}>
-            {items.title}
+      {open && (
+        <div className="bg-red-500 text-white absolute left-0 top-24 w-full z-10 h-[calc(100vh-6rem)] flex items-center justify-center text-3xl flex-col gap-8">
+          {links.map((items) => (
+            <Link
+              href={items.url}
+              key={items.id}
+              onClick={() => setOpen(false)}>
+              {items.title}
+            </Link>
+          ))}
+          {!user ? (
+            <Link href="/login" onClick={() => setOpen(false)}>
+              LOGIN
+            </Link>
+          ) : (
+            <Link href="/orders" onClick={() => setOpen(false)}>
+              Orders
+            </Link>
+          )}
+          <Link href="/cart" onClick={() => setOpen(false)}>
+            <CartIcon />
           </Link>
-        ))}
-        {!user ? (
-          <Link href="/login">LOGIN</Link>
-        ) : (
-          <Link href="/orders">Orders</Link>
-        )}
-        <CartIcon />
-      </div>
+        </div>
+      )}
     </>
   );
 };
