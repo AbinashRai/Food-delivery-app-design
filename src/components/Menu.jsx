@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CartIcon from "./CartIcon";
 
 const links = [
   { id: 1, title: "Homepage", url: "/" },
@@ -43,7 +44,7 @@ const Menu = () => {
         ) : (
           <Link href="/orders">Orders</Link>
         )}
-        <Link></Link>
+        <CartIcon />
       </div>
     </>
   );
